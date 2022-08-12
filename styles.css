@@ -404,7 +404,7 @@ a {
     margin-top: 8rem;
     background: url(https://www.salesforce.com/content/dam/web/en_au/www/images/home/hp-img-closer-bg.png);
     background-repeat: no-repeat;
-    Sbackground-size: cover;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     padding-left: 1rem;
