@@ -404,7 +404,7 @@ a {
     margin-top: 8rem;
     background: url(https://www.salesforce.com/content/dam/web/en_au/www/images/home/hp-img-closer-bg.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    Sbackground-size: cover;
     display: flex;
     flex-direction: column;
     padding-left: 1rem;
@@ -414,6 +414,7 @@ a {
 .section-eight-content-left {
     width: 100%;
     text-align: left;
+    margin-bottom: 5rem;
 }
 #section-eight-content-left-heading {
     text-align: left;
@@ -841,10 +842,14 @@ a {
     }
     .hero-section-img {
         content: url(media/prospect-jumbotron-lg_bharat-petroleum-1053x500-v2.png);
+        margin-right: 0;
+        cursor: pointer;
+        /*overflow: clip;*/
+    }
+    /*#hero-section-img-full {
         width: 100%;
         height: 50%;
-        margin-left: 0;
-    }
+    }*/
     .heading {
         font-size: 24px;
     }
@@ -928,6 +933,23 @@ a {
     .section-four-img {
         max-height: 75%;
         margin-left: 12%;
+    }
+    .section-eight-content {
+        margin-top: 0;
+        flex-direction: row;
+        padding-left: 150px;
+        padding-right: 70px;
+        gap: 2.5rem;
+    }
+    .section-eight-content-left {
+        margin-top: 5rem;
+        width: 60%;
+    }
+    .section-eight-content-right {
+        margin-top: 15rem;
+    }
+    .section-eight-content-right-image img {
+        height: 90%;
     }
     .hidden {
         visibility: visible;
