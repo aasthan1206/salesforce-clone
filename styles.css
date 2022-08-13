@@ -29,21 +29,70 @@ body {
 }
 
 .nav-bar {
-    height: 107px;
-    border-bottom: 1px solid #c1b9b4;
+    display: none;
 }
-
-/*.header {
-    background: url(https://www.salesforce.com/content/dam/web/en_au/www/images/events/df22/hp-df22-eb1-sm-longer.png);
+.nav-bar-mobile {
+    display: flex;
+    top: 0;
+    padding: 0.5rem 1rem;
+    justify-content: space-between;
+}
+.nav-bar-mobile-logo img{
+    width: 90%;
+}
+.nav-bar-mobile-button button {
+    border-radius: 4px;
+    font-size: 11px;
+    padding: 10px 24px;
+    font-family: SalesforceSans, Arial, Helvetica, sans-serif;
+    background: transparent;
+    color: #0b5cab;
+    text-align: center;
+    border: 1px solid #0b5cab;
+    cursor: pointer;
+}
+.nav-bar-mobile-button button:active, .nav-bar-mobile-button button:hover {
+    background-color: #e8e5e5;
+}
+.nav-bar-mobile-menu i{
+    color:#00a1e0;
+    font-size: 35px;
+}
+.header {
+    background: url(https://www.salesforce.com/content/dam/web/en_au/www/images/events/df22/hp-df22-eb1-mobile-v2.png);
     background-size: cover;
-    height: 10rem;
-}*/
-
+    height: 7rem;
+    background-repeat: no-repeat;
+}
+#header-body {
+    display: none;
+}
+.header-body-mobile {
+    margin-left: 1.5rem;
+    padding-top: 1rem;
+}
+.header-mobile-body-line1 {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: ITC_bold;
+    color: #032d60;
+}
+.header-mobile-body-line2, .header-mobile-body-line3 {
+    font-size: 15px;
+    font-weight: 400;
+    font-family: SalesforceSans_bold, Arial, Helvetica, sans-serif;
+    color: #032D60;
+}
+.header-mobile-body-line4 a {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: ITC_bold;
+    color: #032d60;
+}
 .hero-section {
     display: flex;
     flex-direction: column;
 }
-
 #hero-section-heading {
     color: #032D60;
     font-family: ITC_bold; /*important*/
@@ -185,7 +234,9 @@ a {
 .section-three-content-body-link a{
     color: #032d60;
 }
-
+.section-three-content-body-img {
+    display: none;
+}
 .section-four-benefit {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -306,8 +357,8 @@ a {
 .section-six-customer360 {
     margin-left: 1rem;
     margin-right: 1rem;
-    text-align: center;
     margin-top: 25%;
+    text-align: center;
 }
 .section-six-content-body-cards-text-heading {
     color: #032d60;
@@ -401,7 +452,7 @@ a {
     color: #0b5cab;
 }
 .section-eight-content {
-    margin-top: 8rem;
+    margin-top: 5rem;
     background: url(https://www.salesforce.com/content/dam/web/en_au/www/images/home/hp-img-closer-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -442,7 +493,7 @@ a {
     margin-bottom: 1rem;
     cursor: pointer;
 }
-.s-e-left-btn1 button:active .s-e-left-btn1 button:hover{
+.s-e-left-btn1 button:active, .s-e-left-btn1 button:hover{
     background-color: #0b4a89;
 }
 .s-e-left-btn2 button{
@@ -457,11 +508,68 @@ a {
     margin-bottom: 1rem;
     cursor: pointer;
 }
-.section-eight-content-right-image img {
+.section-eight-content-right img {
     width: 90%;
 }
 .section-eight-content-right {
     align-items: flex-end;
+}
+.section-nine-content {
+    display: none;
+}
+.section-footer {
+    background-color: #032D60;
+    padding: 0px 32px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 15px;
+    font-family: SalesforceSans, Arial, Helvetica, sans-serif;
+    text-align: left;
+}
+.footer-button {
+    text-align: center;
+}
+.footer-button button{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    min-width: 142px;
+    padding: 8px 16px;
+    cursor: pointer;
+    height: 32px;
+    font-family: SalesforceSans, Arial, Helvetica, sans-serif;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    background: transparent;
+    font-size: 11px;
+    border-radius: 5px;
+    vertical-align: middle;
+    text-align: center;
+}
+.section-footer-content {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.5rem;
+}
+.section-footer-body a {
+    text-decoration: underline;
+    color: #00a1e0;
+    cursor: pointer;
+}
+.section-footer-body a:hover, .section-footer-body a:active{
+    color: #ffffff;
+}
+.section-footer-body-text {
+    font-size: 11px;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+.section-footer-body-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 11px;
+    column-gap: 1.25rem;
+    row-gap: 0.25rem;
 }
 .hidden {
     visibility: hidden;
@@ -476,10 +584,12 @@ a {
         height: 150px;
         width: 100%;
     }
-    .header-body {
-        margin-top: 30px;
+    .header-body-mobile {
+        display: none;
+    }
+    #header-body {
         display: flex;
-        padding: 8px;
+        padding: 50px 8px 8px 8px;
         gap: 3rem;
     }
     #header-text-blue {
@@ -587,6 +697,7 @@ a {
         flex-direction: row;
         flex-wrap: wrap;
         gap: 5rem;
+        justify-content: center;
     }
     #section-six-button-margin button{
         margin-top: 20px;
@@ -623,6 +734,13 @@ a {
     .hidden {
         visibility: hidden;
     }
+    .section-footer-content {
+        flex-direction: row;
+    }
+    .section-footer-body {
+        padding-left: 2rem;
+        padding-top: 1.5rem;
+    }
 }
 
 @media (min-width: 1000px) {
@@ -633,10 +751,12 @@ a {
     .header {
         height: 150px;
     }
-    .header-body {
-        margin-top: 30px;
+    .header-body-mobile {
+        display: none;
+    }
+    #header-body {
         display: flex;
-        padding: 8px;
+        padding: 50px 8px 8px 8px;
         gap: 12rem;
     }
     #header-text-blue {
@@ -702,6 +822,18 @@ a {
         margin-left: 2rem;
         margin-right: 2rem;
     }
+    .section-three-content {
+        display: flex;
+        gap: 1rem;
+    }
+    .section-three-content-body {
+        display: flex;
+        gap: 3rem;
+    }
+    .section-three-content-body-img {
+        display: flex;
+        width: 150%;
+    }
     .section-four-benefit {
         margin-left: 2rem;
         margin-right: 2rem;
@@ -744,10 +876,13 @@ a {
         margin-top: 25%;
     }
     .section-six-content-body {
-        flex-wrap: nowrap;
-        justify-content: space-around;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0;
         text-align: center;
-        gap: 2rem;
+    }
+    #section-six-footer {
+        margin-top: 5rem;
     }
     #section-six-button-margin button{
         margin-top: 20px;
@@ -780,11 +915,152 @@ a {
     #section-seven-button-margin {
         margin-top: 40px;
     }
+    .section-nine-content {
+        display: flex;
+        margin-top: 40px;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-bottom: 50px;
+    }
+    .section-nine-content-left-logo {
+        margin-bottom: 40px;
+    }
+    .section-nine-content-left {
+        margin-right: 3rem;
+    }
+    .section-nine-content-left-icons {
+        display: flex;
+        cursor: pointer;
+    }
+    .section-nine-content-left-icons a {
+        font-size: 26px;
+        margin-right: 2rem;
+        color: #444444;
+    }
+    .section-nine-content-left-call {
+        color: #181818;
+        text-align: left;
+        font-family: SalesforceSans, Arial, Helvetica, sans-serif;
+        font-size: 22px;
+        margin-top: 1rem;
+    }
+    .section-nine-content-right {
+        margin-right: 10rem;
+    }
+    .section-nine-content-right-heading {
+        font-size: 15px;
+        font-weight: 400;
+        font-family: SalesforceSans, Arial, Helvetica, sans-serif;
+        color: #181818;
+        margin-bottom: 1rem;
+    }
+    .section-nine-content-right-text {
+        margin-bottom: 10px;
+    }
+    .section-nine-content-right-text a {
+        font-size: 12px;
+        font-family: SalesforceSans, Arial, Helvetica, sans-serif;
+        color: #0b5cab;
+        cursor: pointer;
+    }
+    .section-nine-content-right-text a:active {
+        color: #181818;
+    }
     .hidden {
         visibility: visible;
     }
+    .section-eight-content {
+        margin-top: 0;
+        flex-direction: row;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        gap: 2.5rem;
+    }
+    .section-eight-content-left {
+        margin-top: 5rem;
+        width: 60%;
+    }
+    .section-eight-content-right {
+        margin-top: 15rem;
+    }
+    .section-eight-content-right-image img {
+        height: 90%;
+    }
 }
 @media (min-width: 1100px) {
+    .nav-bar-mobile {
+        display: none;
+    }
+    .nav-bar {
+        display: flex;
+        padding-left: 120px;
+        margin-top: 1rem;
+        border-bottom: 3px solid #00a1e0;
+    }
+    .nav-bar-items {
+        display: flex;
+        margin-top: 60px;
+        margin-left: 15px;
+        padding-bottom: 8px;
+        column-gap: 15px;
+    }
+    .nav-bar-items a {
+        font-size: 16px;
+        font-family: SalesforceSans, Arial, Helvetica, sans-serif;
+        color: #215ca0;
+    }
+    .nav-bar-right {
+        margin-left: 18%;
+    }
+    .nav-bar-top {
+        display: flex;
+    }
+    .nav-bar-top-search {
+        color: #222222;
+        font-size: 16px;
+        font-family: SalesforceSans, Arial, Helvetica, sans-serif;
+    }
+    .nav-bar-top-contact {
+        color: #0b5cab;
+        font-size: 15px;
+        font-family: SalesforceSans, Arial, Helvetica, sans-serif;
+        margin-left: 1rem;
+    }
+    .nav-bar-top-login {
+        display: flex;
+        font-size: 15px;
+        color: #215ca0;
+        font-family: SalesforceSans, Arial, Helvetica, sans-serif;
+        margin-left: 0.5rem;
+        padding-left: 1rem;
+        border-left: 2px solid lightslategray;
+
+    }
+    .nav-bar-top-login img {
+        width: 20px;
+        margin-left: 5px;
+    }
+    .nav-bar-bottom {
+        margin-top: 0.5rem;
+        margin-left: 63%;
+        width: 100%;
+    }
+    .nav-bar-bottom button {
+        border-radius: 4px;
+        font-size: 14px;
+        padding: 10px 24px;
+        font-family: SalesforceSans, Arial, Helvetica, sans-serif;
+        background-color: #278806;
+        color: #ffffff;
+        text-align: center;
+        border: 1px solid transparent;
+        margin-right: 2rem;
+        margin-bottom: 1rem;
+        cursor: pointer;
+    }
+    .nav-bar-bottom button:active, .nav-bar-bottom button:hover {
+        background-color: #227406;
+    }
     .header {
         background: url(https://www.salesforce.com/content/dam/web/en_au/www/images/events/df22/hp-df22-eb1-sm-longer.png);
         background-size: cover;
@@ -793,7 +1069,6 @@ a {
         height: 150px;
     }
     .header-body {
-        margin-top: 30px;
         display: flex;
         padding: 8px;
         gap: 12rem;
@@ -870,8 +1145,23 @@ a {
         width: 250px;
     }
     .section-three-whatsnew {
-        margin-left: 100px;
-        margin-right: 100px;
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+    .section-three-content {
+        display: flex;
+        justify-content: center;
+    }
+    .section-three-content-body {
+        display: flex;
+        gap: 0.5rem;
+    }
+    .section-three-content-body-img {
+        display: flex;
+        width: 70%;
+    }
+    .section-three-content-body-text {
+        width: 12rem;
     }
     .section-four-benefit {
         margin-left: 175px;
@@ -951,6 +1241,17 @@ a {
     .section-eight-content-right-image img {
         height: 90%;
     }
+    .section-nine {
+        margin-left: 100px;
+    }
+    .section-nine-content-right {
+        margin-right: 5rem;
+    }
+    .section-footer-content {
+        margin-left: 100px;
+        margin-right: 100px;
+        
+    }
     .hidden {
         visibility: visible;
     }
@@ -988,5 +1289,10 @@ a {
     } 
     .s-e-left-btn2 button {
         padding-left: 0;
+    }
+}
+@media (min-width: 918px) {
+    .header-text span {
+        margin-left: 16.5rem;
     }
 }
