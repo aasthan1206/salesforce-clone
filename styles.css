@@ -24,12 +24,16 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
-    font-size: 15px;
-}
 
 .nav-bar {
     display: none;
+}
+.navigation {
+    position: fixed;
+    top: 0;
+    background: #ffffff;
+    height: 4rem;
+    width: 100%;
 }
 .nav-bar-mobile {
     display: flex;
@@ -39,6 +43,9 @@ body {
 }
 .nav-bar-mobile-logo img{
     width: 90%;
+}
+.nav-bar-mobile-button {
+    margin-left: -1rem;
 }
 .nav-bar-mobile-button button {
     border-radius: 4px;
@@ -53,16 +60,26 @@ body {
 }
 .nav-bar-mobile-button button:active, .nav-bar-mobile-button button:hover {
     background-color: #e8e5e5;
-}
+} 
 .nav-bar-mobile-menu i{
     color:#00a1e0;
     font-size: 35px;
+}
+.nav-bar-mobile-items {
+    position: absolute;
+    right: 0;
+    width: 90%;
+    transform: translateX(100%);
+}
+.nav-active {
+    transform: translateX(0%)
 }
 .header {
     background: url(https://www.salesforce.com/content/dam/web/en_au/www/images/events/df22/hp-df22-eb1-mobile-v2.png);
     background-size: cover;
     height: 7rem;
     background-repeat: no-repeat;
+    margin-top: 4rem;
 }
 #header-body {
     display: none;
@@ -109,7 +126,7 @@ body {
 .hero-section-text {
     font-family: SalesforceSans_light, Arial, Helvetica, sans-serif;
     color: #181818;
-    font-size: 14px;
+    font-size: 15px;
     margin-left: 2rem;
     /*margin-right: 2rem;*/
     margin-top: 1rem;
@@ -186,27 +203,27 @@ a {
 .heading {
     text-align: center;
     color: #032d60;
-    font-size: 18px;
+    font-size: 16px;
     font-family: ITC_bold;
     margin-bottom: 10%;
     margin-top: 8rem;
 }
 .section-two-content-cards-heading {
     color: #032d60;
-    font-size: 1rem;
+    font-size: 15px;
     font-family: ITC_bold;
     margin-bottom: 0.5rem;
     margin-top: 6%;
 }
 .section-two-content-cards-text {
     color: #181818;
-    font-size: 1rem;
+    font-size: 14px;
     font-family: SalesforceSans_light,  Arial, Helvetica, sans-serif;
     margin-bottom: 6%;
 }
 .section-two-content-cards-link {
     color: #0b5cab;
-    font-size: 1rem;
+    font-size: 14px;
     font-family: SalesforceSans, Arial, Helvetica, sans-serif;
     font-weight: bold;
     margin-bottom: 10%;
@@ -223,7 +240,8 @@ a {
     color: #444444;
     font-family: SalesforceSans_bold, Arial, Helvetica, sans-serif;
     margin-bottom: 0.5rem;
-    font-size: 0.75rem;
+    font-size: 11px;
+    letter-spacing: 1.5px;
 }
 .section-three-content-body-link {
     color: #032d60;
@@ -245,6 +263,7 @@ a {
 .section-four-content {
     display: flex;
     flex-direction: column;
+    margin-left: 0.5rem;
 }
 
 #section-four-heading {
@@ -252,7 +271,7 @@ a {
 }
 .section-four-content-text {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 .section-four-content-text-tick {
     margin-right: 1rem;
@@ -265,6 +284,7 @@ a {
     color: #181818;
     font-family: SalesforceSans, Arial, Helvetica, sans-serif;
     margin-bottom: 1rem;
+    font-size: 15px;
 }
 .section-four-button {
     margin-left: 2.25rem;
@@ -292,6 +312,7 @@ a {
 }
 #section-five-heading {
     text-align: left;
+    margin-top: 5rem;
 }
 .section-five-content {
     display: flex;
@@ -313,6 +334,7 @@ a {
     color: #181818;
     font-family: SalesforceSans, Arial, Helvetica, sans-serif;
     margin-bottom: 0.5rem;
+    font-size: 15px;
 }
 .section-five-content-button button {
     border-radius: 4px;
@@ -337,7 +359,8 @@ a {
     color: #444444;
     font-family: SalesforceSans_bold, Arial, Helvetica, sans-serif;
     margin-bottom: 0.75rem;
-    font-size: 0.75rem;
+    font-size: 11px;
+    letter-spacing: 1.5px;
 }
 .section-five-content-right-body-text-link {
     color: #032d60;
@@ -348,6 +371,7 @@ a {
     font-family: SalesforceSans, Arial, Helvetica, sans-serif;
     margin-top: 0.75rem;
     margin-bottom: 4rem;
+    font-size: 15px;
 }
 #section-five-background {
     position: absolute;
@@ -363,7 +387,9 @@ a {
 .section-six-content-body-cards-text-heading {
     color: #032d60;
     font-family: SalesforceSans_bold, Arial, Helvetica, sans-serif;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 16px;
+    font-family: ITC_bold;
 }
 .section-six-content-body-cards-button button{
     border-radius: 4px;
@@ -383,11 +409,14 @@ a {
 .section-six-content-body-cards-link a{
     color: #0b5cab;
     font-family: SalesforceSans_bold, Arial, Helvetica, sans-serif;
-    font-size: small;
+    font-size: 14px;
     margin-bottom: 2rem;
     cursor: pointer;
 }
-.section-six-content-footer p {
+.section-six-content-body-cards-text img {
+    width: 130px;
+}
+.section-six-footer-text {
     color: #032d60;
     font-family: SalesforceSans_bold, Arial, Helvetica, sans-serif;
 
@@ -415,10 +444,12 @@ a {
 .section-seven-context-body-cards-imgtext-name {
     color: #181818;
     font-family: SalesforceSans_bold,   Arial, Helvetica, sans-serif;
+    font-size: 15px;
 }
 .section-seven-context-body-cards-imgtext-desc {
     color: #181818;
     font-family: SalesforceSans,   Arial, Helvetica, sans-serif;
+    font-size: 15px;
 }
 .section-seven-content-body-cards-button button {
     border-radius: 4px;
@@ -447,6 +478,7 @@ a {
 .section-seven-content-footer {
     color: #032d60;
     font-family: SalesforceSans_bold, Arial, Helvetica, sans-serif;
+    font-size: 14px;
 }
 .section-seven-content-footer a{
     color: #0b5cab;
@@ -510,6 +542,7 @@ a {
 }
 .section-eight-content-right img {
     width: 90%;
+    margin-bottom: -5px;
 }
 .section-eight-content-right {
     align-items: flex-end;
@@ -638,14 +671,21 @@ a {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-left:2rem;
         margin-right: 2rem;
+        margin-left: -2rem;
     }
     .section-two-content-cards {
         width: 200px;
     }
     .section-two-content-cards-img img{
         max-width: 90%;
+    }
+    .section-two-content-cards-text {
+        font-size: 13px;
+        height: 5rem;
+    }
+    .section-two-content-cards-link {
+        font-size: 14px;
     }
     #section-three-heading {
         margin-bottom: 2rem;
@@ -657,6 +697,9 @@ a {
     .section-four-content-text {
         flex-direction: row;
     }
+    .section-four-content-body-text-prag-desc {
+        font-size: 15px;
+    }
     .section-four-img img{
         max-width: 90%;
     }
@@ -666,21 +709,28 @@ a {
         gap: 1.5rem;
     }
     .section-five-content-img {
-        width: 100%;
+        width: 60%;
     }
     .section-five-content-right-body {
         display: flex;
         flex-direction: row;
         gap: 1.5rem;
     }
+    .section-five-content-right-body-text-heading {
+        font-size: 11px;
+    }
+    .section-five-content-right-body-text-link {
+        font-size: 18px;
+        font-weight:900;
+    }
     #section-five-content-right-body-img-one {
-        width: 115%;
+        width: 65%;
     }
     #section-five-content-right-body-img-two {
-        width: 150%;
+        width: 85%;
     }
     #section-five-content-right-body-img-three {
-        width: 200%;
+        width: 110%;
     }
     .section-six-customer360 {
         margin-top: 25%;
@@ -697,7 +747,7 @@ a {
         flex-direction: row;
         flex-wrap: wrap;
         gap: 5rem;
-        justify-content: center;
+        justify-content: space-around;
     }
     #section-six-button-margin button{
         margin-top: 20px;
@@ -723,6 +773,11 @@ a {
     }
     .section-seven-content-body-cards {
         width: 200px;
+    }
+    .section-seven-content-body-cards-tag {
+        width: 140px;
+        margin-left: auto;
+        margin-right: auto;
     }
     #section-seven-button-margin {
         margin-top: 40px;
@@ -790,24 +845,28 @@ a {
     }
     .hero-section {
         flex-direction: row;
-        margin-left: 2rem;
+        margin-left: 1rem;
+        overflow-x: hidden;
     }
     #hero-section-heading {
         font-size: 28px;
-        margin-right: 8rem;
     }
     .hero-section-text {
-        margin-right: 8rem;
+        width: 30rem;
+        font-size: 22px;
     }
     /* #hero-section-img-mobile {
         visibility: hidden;
     }*/
     .hero-section-img {
         content: url(media/prospect-jumbotron-lg_bharat-petroleum-1053x500-v2.png);
-        margin-left: 0;
+        height: 30%;
     }
     .heading {
         font-size: 24px;
+    }
+    .section-two-cando {
+        margin-left: 1rem;
     }
     #section-two-heading {
         margin-bottom: 2rem;
@@ -815,12 +874,32 @@ a {
         text-align: center;
     }
     .section-two-content {
-        justify-content: center;
-        gap: 6rem;
+        justify-content: space-between;
+    }
+    .section-two-content-cards {
+        width: 350px;
+    }
+    .section-two-content-cards-heading {
+        font-size: 15px;
+    }
+    .section-two-content-cards-text {
+        font-size: 13px;
+        width: 250px;
+        margin-left: 2.5rem;
+        height: 50px;
+    }
+    .section-two-content-cards-img img{
+        width: 230px;
+    }
+    #section-two-third-img {
+        margin-bottom: 20px;
+    }
+    .section-two-content-cards-link {
+        font-size: 15px;
     }
     .section-three-whatsnew {
-        margin-left: 2rem;
-        margin-right: 2rem;
+        margin-left: 2.5rem;
+        margin-right: 4rem;
     }
     .section-three-content {
         display: flex;
@@ -835,13 +914,23 @@ a {
         width: 150%;
     }
     .section-four-benefit {
-        margin-left: 2rem;
-        margin-right: 2rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
     }
     #section-four-heading {
         margin-bottom: 3rem;
         text-align: left;
         margin-left: 50px;
+    }
+    .section-four-content-text {
+        width: 420px;
+    }
+    .section-four-content-image {
+        text-align: right;
+    }
+    .section-four-img {
+        height: 75%;
+        margin-top: -30px;
     }
     .section-five-explore {
         margin-left: 2rem;
@@ -875,6 +964,9 @@ a {
         margin-right: 2rem;
         margin-top: 25%;
     }
+    #section-six-heading {
+        margin-bottom: 2rem;
+    }
     .section-six-content-body {
         flex-wrap: wrap;
         justify-content: center;
@@ -883,14 +975,13 @@ a {
     }
     #section-six-footer {
         margin-top: 5rem;
+        margin-left: 6rem;
     }
     #section-six-button-margin button{
         margin-top: 20px;
     }
     .section-six-content-footer {
         width: 100%;
-    }
-    .section-six-content-footer {
         display: flex;
         justify-content: center;
     }
@@ -898,6 +989,7 @@ a {
         padding-top: 25px;
         padding-left: 10px;
         padding-right: 80px;
+        font-family: SalesforceSans, Arial, Helvetica, sans-serif;
     }
     .section-seven-story {
         margin-left: 2rem;
@@ -997,6 +1089,9 @@ a {
         margin-top: 1rem;
         border-bottom: 3px solid #00a1e0;
     }
+    .navigation {
+        display: none;
+    }
     .nav-bar-items {
         display: flex;
         margin-top: 60px;
@@ -1010,7 +1105,11 @@ a {
         color: #215ca0;
     }
     .nav-bar-right {
-        margin-left: 18%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+        margin-right: 10%;
     }
     .nav-bar-top {
         display: flex;
@@ -1033,7 +1132,7 @@ a {
         font-family: SalesforceSans, Arial, Helvetica, sans-serif;
         margin-left: 0.5rem;
         padding-left: 1rem;
-        border-left: 2px solid lightslategray;
+        border-left: 1px solid rgb(187, 189, 190);
 
     }
     .nav-bar-top-login img {
@@ -1042,8 +1141,6 @@ a {
     }
     .nav-bar-bottom {
         margin-top: 0.5rem;
-        margin-left: 63%;
-        width: 100%;
     }
     .nav-bar-bottom button {
         border-radius: 4px;
@@ -1054,7 +1151,6 @@ a {
         color: #ffffff;
         text-align: center;
         border: 1px solid transparent;
-        margin-right: 2rem;
         margin-bottom: 1rem;
         cursor: pointer;
     }
@@ -1064,9 +1160,8 @@ a {
     .header {
         background: url(https://www.salesforce.com/content/dam/web/en_au/www/images/events/df22/hp-df22-eb1-sm-longer.png);
         background-size: cover;
-    }
-    .header {
         height: 150px;
+        margin-top: 0;
     }
     .header-body {
         display: flex;
@@ -1102,6 +1197,9 @@ a {
     .header-button button:active, .header-button button:hover {
         background-color: #e8e5e5;
     }
+    .hero-section {
+        overflow-x: hidden;
+    }
     #hero-section-heading {
         font-size: 26px;
         width: 30rem;
@@ -1118,15 +1216,13 @@ a {
     .hero-section-img {
         content: url(media/prospect-jumbotron-lg_bharat-petroleum-1053x500-v2.png);
         margin-right: 0;
-        cursor: pointer;
-        /*overflow: clip;*/
+        cursor: pointer;  
     }
     /*#hero-section-img-full {
-        width: 100%;
-        height: 50%;
+        
     }*/
     .heading {
-        font-size: 24px;
+        font-size: 25px;
     }
     .section-two-cando {
         margin-left: 100px;
@@ -1143,6 +1239,9 @@ a {
     }
     .section-two-content-cards {
         width: 250px;
+    }
+    .section-two-content-cards-text {
+        margin-left: 0;
     }
     .section-three-whatsnew {
         margin-left: 150px;
@@ -1164,46 +1263,52 @@ a {
         width: 12rem;
     }
     .section-four-benefit {
-        margin-left: 175px;
-        margin-right: 100px;
+        margin-left: 165px;
+        margin-right: 150px;
 
     }
     #section-four-heading {
         margin-bottom: 3rem;
         text-align: left;
         margin-left: 50px;
+        margin-top: 4rem;
     }
     .section-five-explore {
         margin-left: 150px;
-        margin-right: 150px;
+        margin-right: 120px;
         
     }
     .section-five-content {
-        gap: 2rem;
+        gap: 6rem;
+    }
+    .section-five-content-img {
+        width: 117%;
+        margin-bottom: 0;
     }
     .section-five-content-left-text-prag {
         width: 94%;
     }
     .section-five-content-right-body {
-        width: 85%;
-        font-size: medium;
+        column-gap: 5rem;
     }
     .section-five-content-right-body-text-desc {
         margin-bottom: 1rem;
     }
-    /*.section-five-content-right-body-image {
-        max-width: 115%;
-        height: 70%;
+    .section-five-content-right-body-image {
+        max-width: 130%;
         margin-bottom: 1rem;
-        padding-right: 2rem;
-    }*/
+    }
     .section-six-customer360 {
         margin-left: 100px;
         margin-right: 100px;
     }
+    .section-six-content-body-cards {
+        margin-right: -1rem;
+    }
     .section-six-content-footer {
         display: flex;
         justify-content: center;
+        margin-left: 60px;
     }
     .section-six-footer-text {
         padding-top: 25px;
@@ -1265,10 +1370,14 @@ a {
         content: url(media/prospect-mobile-wheel-bg_bharat-petroleum-768x932-v2.png);
     }
     .heading {
-        font-size: 18px;
+        font-size: 16px;
+        margin-top: 6.5rem;
     }
     .hero-section-button {
         flex-direction: column;
+    }
+    .section-two-content-cards-link {
+        font-size: 14px;
     }
     .section-eight-content-body-left-button {
         gap: 0;
@@ -1284,6 +1393,9 @@ a {
     }
 }
 @media (max-width: 300px){
+    .hero-section-text {
+        margin-right: 2rem;
+    }
     .section-eight-content-body-left-button {
         flex-direction: column;
     } 
