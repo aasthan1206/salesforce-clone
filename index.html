@@ -10,7 +10,7 @@
     </head>
     <body>
 
-        <!--Navigation Bar --Incomplete-->
+        <!--Navigation Bar-->
         <!--https://www.salesforce.com/content/dam/sfdc-docs/www/images/global-navigation/icon-login-astro.png-->
         <div class="nav-bar">
             <div class="nav-bar-logo">
@@ -52,32 +52,35 @@
                 <div class="nav-bar-mobile-button">
                     <a href=""><button>TRY FOR FREE</button></a>
                 </div>
-                <!--<div class="nav-bar-mobile-items">
+                <div class="nav-bar-mobile-items" id="side-nav-bar">
                     <div class="top-item">
                         <div class="top-item-bar">
-                            <span>Home</span>
-                            <span>Cross</span>
+                            <div class="nav-bar-mobile-item-active">Home</div>
+                            <div><a id="nav-bar-close-btn" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></div>
                         </div>
                         <div class="search">
                             <i class="fa fa-search"></i>
                         </div>
                     </div>
-                    <div><a href="">Products</a></div>
-                    <div><a href="">Resources</a></div>
-                    <div><a href="">Support</a></div>
-                    <div><a href="">Company</a></div>
-                </div>-->
-                <div class="nav-bar-mobile-menu">
+                    <div class="nav-bar-mobile-item-div"><a href="">Products</a></div>
+                    <div class="nav-bar-mobile-item-div"><a href="">Resources</a></div>
+                    <div class="nav-bar-mobile-item-div"><a href="">Support</a></div>
+                    <div class="nav-bar-mobile-item-div"><a href="">Company</a></div>
+                    <div class="nav-bar-mobile-item-div"><a href="">Contact US</a></div>
+                    <div class="nav-bar-mobile-item-div"><a href="">Login</a></div>
+                </div>
+                <div class="nav-bar-mobile-menu" onclick="openNav()">
                     <i class="fa fa-bars"></i>
                 </div>
             </div>
         </div>
+        <!--Nav Bar End-->
 
         <!--Header Section Set Background Image-->
         <!--https://www.salesforce.com/content/dam/web/en_au/www/images/events/df22/hp-df22-eb1-sm-longer.png-->
         <!--https://www.salesforce.com/content/dam/web/en_au/www/images/events/df22/hp-df22-eb1-mobile-v2.png-->
         <div class="header">
-            <div class="header-body-mobile">
+            <div class="header-mobile-body">
                 <div class="header-mobile-body-line1">
                     Dreamforce is coming.
                 </div>
@@ -342,7 +345,9 @@
                         </div>
                         <div class="section-five-content-right-body-text">
                             <p  class="section-five-content-right-body-text-heading">GUIDE</p>
-                            <a class="section-five-content-right-body-text-link" href="https://www.salesforce.com/in/resources/guides/customer-focused-technology-guide/?d=mm2-txt-custguide">Your Guide to Customer Focused Technology</a>
+                            <p class="section-five-content-right-body-text-link" >
+                                <a href="https://www.salesforce.com/in/resources/guides/customer-focused-technology-guide/?d=mm2-txt-custguide">Your Guide to Customer Focused Technology</a>
+                            </p>
                             <p class="section-five-content-right-body-text-desc">How to build a technology roadmap around your customers, from vision to adoption.</p>
                         </div>
                     </div>
@@ -350,11 +355,13 @@
                     <!--Second-->
                     <div class="section-five-content-right-body">
                         <div class="section-five-content-right-body-img" id="section-five-content-right-body-img-two">
-                            <a href="https://www.salesforce.com/in/resources/videos/bpcl-customer-film/?d=mm3-txt-bpclvid"><img class="section-five-content-right-body-image" src="media/hp_rcmodule_bcpl_vid-798x432.png" alt=""></a>
+                            <a href="https://www.salesforce.com/in/resources/videos/bpcl-customer-film/?d=mm3-txt-bpclvid"><img class="section-five-content-right-body-image"  src="media/hp_rcmodule_bcpl_vid-798x432.png" alt=""></a>
                         </div>
                         <div class="section-five-content-right-body-text">
                             <p class="section-five-content-right-body-text-heading">VIDEO</p>
-                            <a class="section-five-content-right-body-text-link" href="https://www.salesforce.com/in/resources/videos/bpcl-customer-film/?d=mm3-txt-bpclvid">What Makes BPCL a Trailblazer?</a>
+                            <p class="section-five-content-right-body-text-link" >
+                                <a href="https://www.salesforce.com/in/resources/videos/bpcl-customer-film/?d=mm3-txt-bpclvid">What Makes BPCL a Trailblazer?</a>
+                            </p>
                             <p class="section-five-content-right-body-text-desc">Bharat Petroleum fuels connected customer experiences across seven business units and multiple touchpoints.</p>
                         </div>
                     </div>
@@ -366,7 +373,10 @@
                         </div>
                         <div class="section-five-content-right-body-text">
                             <p class="section-five-content-right-body-text-heading">RESEARCH</p>
-                            <a class="section-five-content-right-body-text-link" href="https://www.salesforce.com/in/form/pdf/state-of-marketing/?d=mm4-txt-somrep" target="_blank">Seventh Edition: State of Marketing Report</a>
+                            <p class="section-five-content-right-body-text-link">
+                                <a href="https://www.salesforce.com/in/form/pdf/state-of-marketing/?d=mm4-txt-somrep" target="_blank">Seventh Edition: State of Marketing Report</a>
+                            </p>
+                            
                             <p class="section-five-content-right-body-text-desc">Uncover the trends and insights from over 8,200+ leading marketers worldwide, so you can strengthen your strategy and career in the year ahead.</p>
                         </div>
                     </div>
@@ -641,11 +651,6 @@
                     <div class="section-nine-content-right-text"><a href="" target="_blank">Salesforce for startups </a><i class="fa fa-external-link" style="font-size:15px;color: grey"></i></div>
                 </div>
             </div>
-        </div>
-
-        <!--Section Nine Start-->
-        <div class="section-nine" class="section-nine-hidden">
-
         </div>
 
         <!--Last Portion-->
