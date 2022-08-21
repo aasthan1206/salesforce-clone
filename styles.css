@@ -29,6 +29,9 @@
 
 /* Navigation Bar */
 /* By default display none for nav-bar */
+.chat-button {
+    display: none;
+}
 .nav-bar {
     display: none;
 }
@@ -109,7 +112,7 @@
     font-size: 35px;
     cursor: pointer;
 }
-#side-nav-bar {
+#side-nav-bar, #side-nav-bar-products {
     position: fixed;
     height: 100%;
     right: 0;
@@ -118,6 +121,9 @@
     z-index: 1;
     background-color: #ffffff;
     overflow-x: hidden;
+}
+#sidebar-products {
+    margin-left: 6.25rem;
 }
 
 /* Header Section */
@@ -889,6 +895,31 @@ a {
         padding-left: 2rem;
         padding-top: 1.5rem;
     }
+    .chat-button {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        margin-right: 2rem;
+        padding: 0.35rem 0.75rem 0.5rem 0.35rem;
+        background-color: #0b5cab;
+        color: #ffffff;
+        letter-spacing: 0.102em;
+        border-radius: 4px;
+        font-family: SalesforceSans, Arial, Helvetica, sans-serif;
+        font-size: 15px;
+    }
+    .chat-button img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-bottom: -0.75rem;
+        border: 2px solid #0b5cab;
+        margin-top: -1.40rem;
+    }
+    .chat-button:hover {
+        text-decoration: underline;
+    }
 }
 
 /* Next Hub */
@@ -1170,8 +1201,18 @@ a {
         display: flex;
         margin-top: 60px;
         margin-left: 15px;
-        padding-bottom: 8px;
+        padding-bottom: 0px;
         column-gap: 15px;
+        margin-bottom: 0;
+    }
+    .nav-bar-items div {
+        padding: 10px 10px 5px 10px;
+    }
+    .nav-bar-items div:hover a{
+        border-top: 3px solid #00a1e0;
+        background: rgb(244, 242, 242);
+        border-bottom: none;
+        padding: 5px 8px 10px 8px;
     }
     .nav-bar-items a {
         font-size: 16px;
@@ -1232,6 +1273,48 @@ a {
         background-color: #227406;
     }
 
+    /* Navbar Dropdown */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+    }
+    .dropdown:hover .dropdown-content {
+        display: flex;
+    }
+    .dropdown-content {
+        margin-top: 8px;
+        background: rgb(244, 242, 242);
+    }
+    .byneed, .byindustry, .by-rightpart{
+        background: #ffffff;
+    }
+    .byneed-heading, .byindustry-heading, .by-rightpart-heading {
+        color: #59575c;
+        font-size: 16px;
+        font-family: SalesforceSans,_bold Arial, Helvetica, sans-serif;
+        font-weight: 800;
+    }
+    #byneed-text, #byindustry-text {
+        padding-top: 0;
+        display: flex;
+        color:#0b5cab;
+    }
+    #small-business, #support, #pricing {
+        width: 200px;
+    }
+    #byneed-text a, #byindustry-text a, #small-business a, #support a, #pricing a {
+        background: none;
+        border: none;
+        display: block;
+    }
+    #byneed-text div, #byindustry-text div {
+        width: 200px;
+        padding-left: 0;
+    }
     /* header */
     .header {
         background: url(https://www.salesforce.com/content/dam/web/en_au/www/images/events/df22/hp-df22-eb1-md.png);

@@ -17,7 +17,61 @@
                 <a href="https://www.salesforce.com/in/"><img src="media/salesforce-cloud-logo-sm.png" alt=""></a>
             </div>
             <div class="nav-bar-items">
-                <div><a href="">Products</a></div>
+                <div class="dropdown"><a href="">Products</a>
+                    <div class="dropdown-content">
+                        <div class="byneed">
+                            <div class="byneed-heading">By Need</div>
+                            <div class="byneed-links" id="byneed-text">
+                                <div>
+                                    <a href="">Customer 360</a> 
+                                    <a href="">Sales</a>
+                                    <a href="">Service</a>
+                                    <a href="">Marketing</a>
+                                    <a href="">Commerce</a>
+                                    <a href="">Analytics</a>
+                                    <a href="">Integration</a>  
+                                </div>
+                                <div>
+                                    <a href="">Slack</a> 
+                                    <a href="">Platform</a>
+                                    <a href="">work.com</a>
+                                    <a href="">Safety</a>
+                                    <a href="">Sustainability</a>
+                                    <a href="">Partner Ecosystem</a>
+                                    <a href="">See all products ></a> 
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="byindustry">
+                            <div class="byindustry-heading">By Industry</div>
+                            <div class="byindustry-links" id="byindustry-text">
+                                <div>
+                                    <a href="">Financial Services</a> 
+                                    <a href="">Manufacturing</a>
+                                    <a href="">Higher Education</a>
+                                    <a href="">Retail</a>
+                                    <a href="">Consumer Goods</a>
+                                    <a href="">Media</a>
+                                    <a href="">See all industries ></a> 
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="by-rightpart">
+                            <div id="small-business">
+                                <div class="by-rightpart-heading">Small Business</div>
+                                <a href="">Small Business</a>
+                            </div>
+                            <div id="support">
+                                <div class="by-rightpart-heading">Support & Services</div>
+                                <a href="">Customer Success</a>
+                            </div>
+                            <div id="pricing">
+                                <div class="by-rightpart-heading">Pricing</div>
+                                <a href="">See product pricing ></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div><a href="">Resources</a></div>
                 <div><a href="">Support</a></div>
                 <div><a href="">Company</a></div>
@@ -52,6 +106,8 @@
                 <div class="nav-bar-mobile-button">
                     <a href=""><button>TRY FOR FREE</button></a>
                 </div>
+
+                <!-- Home Menu -->
                 <div class="nav-bar-mobile-items" id="side-nav-bar">
                     <div class="top-item">
                         <div class="top-item-bar">
@@ -62,7 +118,7 @@
                             <i class="fa fa-search"></i>
                         </div>
                     </div>
-                    <div class="nav-bar-mobile-item-div"><a href="">Products</a></div>
+                    <div class="nav-bar-mobile-item-div" onclick="openProducts()"><a href="javascript:void(0)">Products</a></div>
                     <div class="nav-bar-mobile-item-div"><a href="">Resources</a></div>
                     <div class="nav-bar-mobile-item-div"><a href="">Support</a></div>
                     <div class="nav-bar-mobile-item-div"><a href="">Company</a></div>
@@ -72,8 +128,28 @@
                 <div class="nav-bar-mobile-menu" onclick="openNav()">
                     <i class="fa fa-bars"></i>
                 </div>
+
+                <!-- Side Bar Product Menu -->
+                <div class="nav-bar-mobile-items" id="side-nav-bar-products">
+                    <div class="top-item">
+                        <div class="top-item-bar">
+                            <div class="nav-bar-mobile-item-active" id="sidebar-products">Products</div>
+                            <div><a id="nav-bar-close-btn" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></div>
+                        </div>
+                        <div class="search">
+                            <i class="fa fa-search"></i>
+                        </div>
+                    </div>
+                    <div class="nav-bar-mobile-item-div"><a href="">By Need</a></div>
+                    <div class="nav-bar-mobile-item-div"><a href="">By Industry</a></div>
+                    <div class="nav-bar-mobile-item-div"><a href="">Small Business</a></div>
+                    <div class="nav-bar-mobile-item-div"><a href="">Support & Services</a></div>
+                    <div class="nav-bar-mobile-item-div"><a href="">Pricing</a></div>
+                </div>
             </div>
         </div>
+
+       
         <!--Nav Bar End-->
 
         <!--Header Section Set Background Image-->
@@ -675,6 +751,12 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- Chat button -->
+        <div class="chat-button">
+            <img src="media/chat-rep-shardul.jpg" alt="">
+            LET'S CHAT
         </div>
         <script src="index.js"></script>
     </body>
