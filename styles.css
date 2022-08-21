@@ -908,6 +908,7 @@ a {
         border-radius: 4px;
         font-family: SalesforceSans, Arial, Helvetica, sans-serif;
         font-size: 15px;
+        cursor: pointer;
     }
     .chat-button img {
         width: 50px;
@@ -917,7 +918,7 @@ a {
         border: 2px solid #0b5cab;
         margin-top: -1.40rem;
     }
-    .chat-button:hover {
+    .chat-button:active {
         text-decoration: underline;
     }
 }
@@ -1291,6 +1292,7 @@ a {
     }
     .byneed, .byindustry, .by-rightpart{
         background: #ffffff;
+        margin-bottom: 4px;
     }
     .byneed-heading, .byindustry-heading, .by-rightpart-heading {
         color: #59575c;
